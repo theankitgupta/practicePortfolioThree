@@ -10,11 +10,13 @@ import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import ParticlesBackground from './components/ParticlesBackground';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <div className='relative gradient text-white'>
       <ParticlesBackground />
+      <CustomCursor />
       <Navbar />
       <Home />
       <About />
