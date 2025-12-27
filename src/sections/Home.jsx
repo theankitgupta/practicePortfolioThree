@@ -185,7 +185,7 @@ function Home() {
           {/* Floating Avatar Image */}
           <motion.img
             src={avatar}
-            alt="Ankit Gupta"
+            alt="Alien Image"
             className="relative z-10 w-full max-w-112.5 object-contain pointer-events-none drop-shadow-[0_0_50px_rgba(167,139,250,0.2)]"
             animate={{
               y: [0, -15, 0], // Floating effect
