@@ -1,7 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, {
+  useEffect,
+  useMemo,
+  useState
+} from "react";
 import { motion } from "framer-motion";
 import ParticlesBackground from "../components/ParticlesBackground";
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn
+} from "react-icons/fa6";
 import avatar from "../assets/avator.png";
 
 function Home() {
@@ -42,7 +50,7 @@ function Home() {
           setIndex((i) => (i + 1) % roles.length);
         }
       },
-      deleting ? 50 : 100 // Slower typing speeds for elegance
+      deleting ? 50 : 100
     );
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting, roles]);
@@ -52,16 +60,25 @@ function Home() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: {
+      y: 20,
+      opacity: 0
+    },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      },
     },
   };
 
@@ -72,7 +89,7 @@ function Home() {
     >
       <ParticlesBackground />
 
-      {/* Ambient Cosmic Glows (Replaces harsh blobs) */}
+      {/* Ambient Cosmic Glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-violet-600/20 rounded-full blur-[150px] opacity-60" />
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-sky-500/20 rounded-full blur-[150px] opacity-60" />

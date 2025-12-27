@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCode, FaServer, FaLayerGroup } from "react-icons/fa6";
-import AnkitGupta from "../assets/AnkitGupta.jpg"; // Ensure this path is correct
+import AnkitGupta from "../assets/AnkitGupta.jpg";
 
 function About() {
   // --- Content Data ---
@@ -36,18 +36,24 @@ function About() {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: {
+      y: 20,
+      opacity: 0
+    },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      },
     },
   };
 
   return (
     <section
       id="about"
-      className="relative w-full py-20 lg:py-32 bg-[#050505] text-white overflow-hidden"
+      className="relative w-full py-16 md:py-20 lg:py-32 bg-[#050505] text-white overflow-hidden"
     >
       {/* --- Ambient Background Glows --- */}
       <div className="absolute inset-0 pointer-events-none">
@@ -57,13 +63,16 @@ function About() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* --- Left Column: The Narrative (Span 7) --- */}
+          {/* --- Left Column: The Narrative --- */}
           <motion.div
             className="lg:col-span-7 flex flex-col justify-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{
+              once: true,
+              amount: 0.3
+            }}
           >
             {/* Header */}
             <motion.h2
@@ -83,48 +92,44 @@ function About() {
               </span>
             </motion.h3>
 
-            {/* Bio Paragraphs */}
+            {/* Bio Paragraphs - Optimized for Crispness */}
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-slate-400 text-lg leading-relaxed"
+              className="space-y-4 text-slate-400 text-base md:text-lg leading-relaxed"
             >
               <p>
-                I am a <strong>Full Stack Developer</strong> with over 1+ years
-                of active development experience. While I am fluent in the
-                entire web spectrum, my true passion lies in the{" "}
-                <strong>Backend</strong>—structuring databases, optimizing
-                server logic, and solving complex architectural challenges.
+                I am a <strong>Full Stack Developer</strong> focusing on logic
+                and architecture. While I build across the web spectrum, my
+                expertise shines in the <strong>Backend</strong>—designing
+                scalable schemas, optimizing APIs, and ensuring performance.
               </p>
               <p>
-                I specialize in the{" "}
-                <strong>MERN Stack (MongoDB, Express, React, Node.js)</strong>{" "}
-                and the <strong>MVC pattern</strong>, often leveraging{" "}
-                <strong>Next.js</strong> and <strong>TypeScript</strong> for
-                production-grade applications. Beyond the web, I possess strong
-                foundational knowledge in <strong>Java and C++</strong>, giving
-                me a deeper understanding of memory management and algorithms.
+                My stack is anchored in{" "}
+                <strong>MERN, Next.js, and TypeScript</strong>, structured on{" "}
+                <strong>MVC principles</strong>. I also leverage deep roots in
+                <strong> Java and C++</strong> to write efficient,
+                algorithmically sound code.
               </p>
               <p className="border-l-4 border-violet-500/50 pl-4 italic text-slate-300 bg-white/5 py-2 pr-2 rounded-r-lg">
-                "I may not be a graphic designer, but I am a{" "}
-                <strong>Design-Faithful Developer</strong>. I take a design and
-                turn it into pixel-perfect, functional code."
+                "I am a <strong>Design-Faithful Developer</strong>. I translate
+                creative visions into pixel-perfect, functional reality."
               </p>
             </motion.div>
 
             {/* Action Buttons */}
             <motion.div
               variants={itemVariants}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-8 md:mt-10 flex flex-wrap gap-4"
             >
               <a
                 href="#projects"
-                className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 hover:border-sky-400/50 transition-all duration-300 interactive"
+                className="px-6 md:px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 hover:border-sky-400/50 transition-all duration-300 interactive"
               >
                 See My Code
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3 rounded-full text-slate-300 font-medium hover:text-white transition-colors interactive flex items-center gap-2 group"
+                className="px-6 md:px-8 py-3 rounded-full text-slate-300 font-medium hover:text-white transition-colors interactive flex items-center gap-2 group"
               >
                 Let's Talk{" "}
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -134,16 +139,26 @@ function About() {
             </motion.div>
           </motion.div>
 
-          {/* --- Right Column: Visuals & Highlights (Span 5) --- */}
+          {/* --- Right Column: Visuals & Highlights --- */}
           <motion.div
-            className="lg:col-span-5 flex flex-col gap-8"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="lg:col-span-5 flex flex-col gap-6 md:gap-8"
+            initial={{
+              opacity: 0,
+              x: 50
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.2
+            }}
             viewport={{ once: true }}
           >
             {/* 1. The Image Card */}
-            <div className="relative group w-full max-w-md mx-auto lg:ml-auto">
+            <div className="hidden lg:block relative group w-full max-w-md mx-auto lg:ml-auto">
               {/* Gradient Border Glow */}
               <div className="absolute inset-0 bg-linear-to-tr from-sky-400 via-violet-500 to-sky-400 rounded-2xl blur-[2px] opacity-70 group-hover:opacity-100 group-hover:blur-[5px] transition-all duration-500" />
 
@@ -166,8 +181,8 @@ function About() {
               </div>
             </div>
 
-            {/* 2. Highlights Grid */}
-            <div className="grid grid-cols-1 gap-4">
+            {/* 2. Highlights Grid (Visible on all screens) */}
+            <div className="grid grid-cols-1 gap-3 md:gap-4 mt-6 lg:mt-0">
               {cards.map((card, idx) => (
                 <motion.div
                   key={idx}
@@ -181,7 +196,7 @@ function About() {
                       <card.icon />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold text-lg">
+                      <h4 className="text-white font-semibold text-base md:text-lg">
                         {card.title}
                       </h4>
                       <p className="text-slate-400 text-sm">{card.desc}</p>
@@ -193,6 +208,8 @@ function About() {
           </motion.div>
         </div>
       </div>
+      {/* Section Transition Fog */}
+      <div className="pointer-events-none absolute -bottom-40 left-0 w-full h-80 bg-linear-to-b from-transparent via-[#050505]/60 to-transparent blur-[120px]" />
     </section>
   );
 }
